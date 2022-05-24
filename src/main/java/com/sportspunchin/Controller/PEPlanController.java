@@ -1,22 +1,15 @@
 package com.sportspunchin.Controller;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.github.pagehelper.Page;
-import com.github.pagehelper.page.PageParams;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.sportspunchin.mapper.PEPlanMapper;
 import com.sportspunchin.pojo.PEPlan;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.awt.print.Book;
 import java.util.List;
-import java.util.Map;
 
 @RequestMapping("/Sport")
 @RestController
@@ -27,9 +20,35 @@ public class PEPlanController {
     @GetMapping("/findAll")
     public List<PEPlan> findAll(){
         return pePlanMapper.selectList(null);
-
-
     }
+
+    @GetMapping("/deletePEPlan")
+    public String deletePEPlan(@PathVariable("peid") Integer peid, RedirectAttributes attributes){
+        Integer b = pePlanMapper.deleteById(peid);
+        if (b > 0){
+            attributes.addAttribute("message","删除计划成功");
+            return "redirect:";
+        }else {
+            attributes.addFlashAttribute("message","删除计划失败");
+            return "redirect:";
+        }
+    }
+
+//    @PostMapping("/AddPEPlan")
+//    public String AddPEPlan(@PathVariable("peid") Integer peid, RedirectAttributes attributes){
+//        PEPlan pePlan = new PEPlan();
+//        Integer b = pePlanMapper.insert(pePlan);
+//        if (b > 0){
+//            attributes.addAttribute("message","添加计划成功");
+//            return "redirect:";
+//        }else {
+//            attributes.addFlashAttribute("message","删除计划失败");
+//            return "redirect:";
+//        }
+//    }
+
+
+
 //    @Configuration
 //    public class MyBatisPlusConfig {
 //        @Bean
@@ -40,6 +59,11 @@ public class PEPlanController {
 //    }
 
 
+//    @Override
+//    public PageInfo<Book> listBookAdd(BookQueryAdd bookQueryAdd) {
+//        PageHelper.startPage(bookQueryAdd.getPageNum(), bookQueryAdd.getPageSize());
+//        return new PageInfo<Book>(bookDao.listBookAdd(bookQueryAdd));
+//    }
 
 
 

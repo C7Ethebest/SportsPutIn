@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @TableName(value = "peplan")
 public class PEPlan {
     //主键自增
-    @TableId(type = IdType.AUTO)
+    @TableId(value = "peid", type = IdType.AUTO)
     private Integer peid;
 
     private String pename;
