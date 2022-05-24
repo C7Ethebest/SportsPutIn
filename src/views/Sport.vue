@@ -11,7 +11,7 @@
             fixed
             prop="peid"
             label="编号"
-            width="120">
+            width="60">
         </el-table-column>
         <el-table-column
             prop="pename"
@@ -37,8 +37,9 @@
             fixed="right"
             label="操作">
           <template slot-scope="scope">
-            <el-button @click="handleClick(scope.row)" type="text" size="small">查看</el-button>
-            <el-button type="text" size="small">编辑</el-button>
+            <el-button @click="handleClick(scope.row)" type="primary" plain
+                       size="small" style="margin-left: 15px">购买</el-button>
+<!--            <el-button type="primary" plain size="small" style="margin-left: 30px">编辑</el-button>-->
           </template>
         </el-table-column>
       </el-table>
@@ -60,7 +61,8 @@
           background
           layout="prev, pager, next"
           :page-size="4"
-          :total="50"
+          :total="30"
+          style="margin-top: 10px;"
           @current-chang="page">
       </el-pagination>
   </div>

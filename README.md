@@ -1,19 +1,21 @@
-# vuetest
+#运动打卡系统（前端）
+开发中...
 
-## Project setup
-```
-npm install
-```
+###已完成功能：
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+整体前端框架(index.vue)，商城走马灯(Market.vue)，普通运动计划商城数据链接后端(Sport)，我的训练计划(MyPEPlan.vue)  <br>
+球类运动计划(BallSport.vue，弃用)    <br>
+AboutView和Home系统自动生成的，用于测试存留
 
-### Compiles and minifies for production
-```
-npm run build
-```
+###开发中：
+新增教练的计划页面，对表进行的增删改操作的跳转和相关页面    <br>
+用户打卡图片上传(PunchIn.vue)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+###未完成：
+登陆界面、我的账号(MyAccount.vue)、教练评分、用户评价。 <br>
+
+*==>可以试着把登陆界面做了，还有增删改相关的页面搭建，跳转的建立等都可以做。*   <br>
+Vue安装教程：https://www.bilibili.com/video/BV11v411M7Xa?spm_id_from=333.337.search-card.all.click   <br>
+在IDEA插件商店安装Vue插件来开发Vue   <br>
+使用Element-UI(前端现成样式)：https://element.eleme.cn/#/zh-CN/component/installation    <br>
+安装axios(前后端传数据用)：IDEA控制台输入 npm install axios    <br>

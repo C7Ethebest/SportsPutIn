@@ -17,6 +17,8 @@
 
 <script>
 export default {
+  name: "AddPEPlan",
+
   data() {
     return {
       ruleForm: {

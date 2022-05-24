@@ -9,6 +9,7 @@ import Index from  "@/views/Index";
 import AddPEPlan from "@/views/AddPEPlan";
 import PunchIn from "@/views/PunchIn";
 import Market from "@/views/Market";
+import CoachPEPlan from "@/views/CoachPEPlan";
 
 
 Vue.use(VueRouter)
@@ -16,9 +17,9 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: "/",
-    name: "商城",
+    name: "主界面",
     component: Index,
-    // redirect: "/Sport",
+    redirect: "/Market",
     children:[
       {
         path: "/Sport",
@@ -54,6 +55,11 @@ const routes = [
         path: "/Market",
         name: "商城",
         component: Market
+      },
+      {
+        path: "/CoachPEPlan",
+        name: "教练的计划",
+        component: CoachPEPlan
       }
       ],
   },
