@@ -20,7 +20,7 @@
         </el-table-column>
         <el-table-column
             prop="mytimes"
-            label="时间"
+            label="计划时长"
             width="120">
         </el-table-column>
         <el-table-column

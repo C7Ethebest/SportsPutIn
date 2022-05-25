@@ -1,13 +1,28 @@
 <template>
 
+
   <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="110px" class="demo-ruleForm">
-    <el-form-item label="训练计划名称" prop="name">
-      <el-input v-model="ruleForm.name"></el-input>
+    <el-form-item label="训练计划名称" prop="pename">
+      <el-input v-model="ruleForm.pename"></el-input>
+    </el-form-item>
+
+    <el-form-item label="计划时长" prop="times">
+      <el-input v-model="ruleForm.times"></el-input>
+    </el-form-item>
+
+    <el-form-item label="教练" prop="coach">
+      <el-input v-model="ruleForm.coach"></el-input>
+    </el-form-item>
+
+    <el-form-item label="价格" prop="price">
+      <el-input v-model="ruleForm.price"></el-input>
     </el-form-item>
 
 
+
+
     <el-form-item>
-      <el-button type="primary" @click="submitForm('ruleForm')">立即创建</el-button>
+      <el-button type="primary" @click="submitForm ('ruleForm')">立即创建</el-button>
       <el-button @click="resetForm('ruleForm')">重置</el-button>
     </el-form-item>
   </el-form>
@@ -22,55 +37,61 @@ export default {
   data() {
     return {
       ruleForm: {
-        name: '',
-        region: '',
-        date1: '',
-        date2: '',
-        delivery: false,
-        type: [],
-        resource: '',
-        desc: ''
+        pename: '',
+        times: '',
+        coach: '',
+        price: '',
       },
       rules: {
-        name: [
-          { required: true, message: '请输入活动名称', trigger: 'blur' },
-          { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+        pename: [
+          { required: true, message: '请输入训练计划名称', trigger: 'change' },
+          { min: 1, max: 10, message: '长度在 1 到 10 个字符', trigger: 'change' }
         ],
-        region: [
-          { required: true, message: '请选择活动区域', trigger: 'change' }
+        times: [
+          { required: true, message: '请输入训练计划时长', trigger: 'change' }
         ],
-        date1: [
-          { type: 'date', required: true, message: '请选择日期', trigger: 'change' }
+        coach: [
+          { required: true, message: '请输入教练名称', trigger: 'change' }
         ],
-        date2: [
-          { type: 'date', required: true, message: '请选择时间', trigger: 'change' }
+        price: [
+          { required: true, message: '请输入训练计划价格', trigger: 'change' }
         ],
-        type: [
-          { type: 'array', required: true, message: '请至少选择一个活动性质', trigger: 'change' }
-        ],
-        resource: [
-          { required: true, message: '请选择活动资源', trigger: 'change' }
-        ],
-        desc: [
-          { required: true, message: '请填写活动形式', trigger: 'blur' }
-        ]
       }
     };
   },
   methods: {
     submitForm(formName) {
+      const _this = this
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          alert('submit!');
+          // console.log(_this.ruleForm);
+          // alert("添加成功！");
+          axios.post('http://localhost:8888/Sport/AddPEPlan',this.ruleForm).then(function (resp){
+            // console.log(resp)
+            if(resp.data == 'success'){
+              _this.$alert('添加计划成功！','OK',{
+                confirmButtonText:'确定',
+                    callback: action =>{
+                  type: 'info',
+                  _this.$router.push('/CoachPEPlan');
+                }
+              })
+            }else {
+              _this.$message.error('添加计划失败，请重新输入！');
+            }
+          })
         } else {
-          console.log('error submit!!');
+          _this.$message.error('添加计划失败，请重新输入！');
           return false;
         }
       });
     },
+
     resetForm(formName) {
       this.$refs[formName].resetFields();
-    }
+    },
+
+
   }
 }
 </script>

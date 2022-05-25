@@ -20,7 +20,7 @@
         </el-table-column>
         <el-table-column
             prop="times"
-            label="时间"
+            label="计划时长"
             width="120">
         </el-table-column>
         <el-table-column
@@ -37,7 +37,7 @@
             fixed="right"
             label="操作">
           <template slot-scope="scope">
-            <el-button @click="handleClick(scope.row)" type="primary" plain
+            <el-button @click="BuyPEPlan(scope.row)" type="primary" plain
                        size="small" style="margin-left: 15px">购买</el-button>
 <!--            <el-button type="primary" plain size="small" style="margin-left: 30px">编辑</el-button>-->
           </template>

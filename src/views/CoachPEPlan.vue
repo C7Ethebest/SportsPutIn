@@ -20,7 +20,7 @@
         </el-table-column>
         <el-table-column
             prop="times"
-            label="时间"
+            label="计划时长"
             width="120">
         </el-table-column>
         <el-table-column
@@ -38,39 +38,42 @@
             label="操作">
           <template slot-scope="scope">
             <el-button @click="handleClick(scope.row)" type="primary" plain
-                       size="small" style="margin-left: 15px">编辑</el-button>
-            <el-button @click="JumpAddPEPlan" type="primary" plain
-                       size="small" style="margin-left: 15px">添加</el-button>
-            <el-popconfirm
-                title="确认删除计划吗？">
-              <el-button @click="handleClick" slot="reference" type="danger" plain size="small" style="margin-left: 15px">删除计划</el-button>
-            </el-popconfirm>
-            <!--            <el-button type="primary" plain size="small" style="margin-left: 30px">编辑</el-button>-->
+                       size="small" >编辑</el-button>
+
+
+            <el-popover
+                placement="top"
+                width="160"
+                v-model="visible">
+              <p>确认删除吗？</p>
+              <div style="text-align: right; margin: 0">
+                <el-button size="mini" type="text" @click="visible = false">取消</el-button>
+                <el-button type="primary" size="mini" style="margin-left: 20px" @click="visible = false; deletePEPlan(scope.row)">确定</el-button>
+              </div>
+              <el-button slot="reference" type="danger" size="small" style="margin-left: 30px">删除</el-button>
+            </el-popover>
           </template>
+
         </el-table-column>
       </el-table>
 
-      <!--  &lt;!&ndash;失败的卡片布局&ndash;&gt;-->
-      <!--    <el-card  shadow="hover" :body-style="{ padding: '0px'}" class="el-card">-->
-      <!--      <img src="../assets/3.png" class="image">-->
-      <!--      <div style="padding: 14px;">-->
-      <!--        <td class="sprottext">跑步</td>-->
-      <!--        <div class="bottom clearfix">-->
-      <!--          <el-button type="text" class="button" onclick="">查看</el-button>-->
-      <!--        </div>-->
-      <!--      </div>-->
-      <!--    </el-card>-->
 
     </el-container>
 
-    <el-pagination
-        background
-        layout="prev, pager, next"
-        :page-size="4"
-        :total="30"
-        style="margin-top: 10px;"
-        @current-chang="page">
-    </el-pagination>
+    <el-container>
+      <el-pagination
+          background
+          layout="prev, pager, next"
+          :page-size="4"
+          :total="30"
+          style="margin-top: 10px;margin-left: 200px"
+          @current-chang="page">
+      </el-pagination>
+
+      <el-button @click="JumpAddPEPlan" type="primary" plain class="Addbtn">添加新计划</el-button>
+    </el-container>
+
+
   </div>
 </template>
 
@@ -79,6 +82,19 @@ export default {
   name: "CoachPEPlan",
 
   methods: {
+    deletePEPlan(row){
+      const _this = this
+      axios.delete('http://localhost:8888/Sport/deletePEPlan/'+row.peid).then(function (){
+            _this.$alert('删除计划成功！','消息',{
+              confirmButtonText:'确定',
+              callback: action => {
+                type: 'info',
+                    window.location.reload()
+              }
+      })
+    })
+    },
+
     JumpAddPEPlan(){
       this.$router.push({
         path:'/AddPEPlan'
@@ -113,6 +129,13 @@ export default {
 
 
 <style scoped>
+.Addbtn{
+  margin-top: 7px;
+  margin-left: 20px;
+  width: 200px;
+  height: 35px;
+  text-align: center;
 
+}
 
 </style>

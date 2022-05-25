@@ -1,6 +1,6 @@
 <template>
   <!--  构建整个页面框架  -->
-  <el-container style="height: 550px; border: 1px solid #eee;text-align: center;" >
+  <el-container style="height: 600px; border: 1px solid #eee;text-align: center;" >
       <el-header style="text-align: right; font-size: 12px">
         <h1 style="text-align: center;margin-top: auto">体育打卡系统</h1>
       </el-header>
