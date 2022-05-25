@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class MyPEPlan {
     //主键自增
     @TableId(type = IdType.AUTO)
-    private Integer mypeid;
+    private long mypeid;
 
     private String mypename;
     private String mytimes;

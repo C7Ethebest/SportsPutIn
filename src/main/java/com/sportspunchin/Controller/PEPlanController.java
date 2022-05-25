@@ -1,14 +1,12 @@
 package com.sportspunchin.Controller;
 
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
+
 import com.sportspunchin.mapper.PEPlanMapper;
 import com.sportspunchin.pojo.PEPlan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.awt.print.Book;
+
 import java.util.List;
 
 @RequestMapping("/Sport")
@@ -22,31 +20,21 @@ public class PEPlanController {
         return pePlanMapper.selectList(null);
     }
 
-    @GetMapping("/deletePEPlan")
-    public String deletePEPlan(@PathVariable("peid") Integer peid, RedirectAttributes attributes){
-        Integer b = pePlanMapper.deleteById(peid);
-        if (b > 0){
-            attributes.addAttribute("message","删除计划成功");
-            return "redirect:";
-        }else {
-            attributes.addFlashAttribute("message","删除计划失败");
-            return "redirect:";
-        }
+    @DeleteMapping("/deletePEPlan/{peid}")
+    public void deletePEPlan(@PathVariable("peid") Integer peid){
+        pePlanMapper.deleteById(peid);
     }
 
-//    @PostMapping("/AddPEPlan")
-//    public String AddPEPlan(@PathVariable("peid") Integer peid, RedirectAttributes attributes){
-//        PEPlan pePlan = new PEPlan();
-//        Integer b = pePlanMapper.insert(pePlan);
-//        if (b > 0){
-//            attributes.addAttribute("message","添加计划成功");
-//            return "redirect:";
-//        }else {
-//            attributes.addFlashAttribute("message","删除计划失败");
-//            return "redirect:";
-//        }
-//    }
+    @PostMapping("/AddPEPlan")
+    public String AddPEPlan(@RequestBody PEPlan pePlan){
 
+        Integer result = pePlanMapper.insert(pePlan);
+        if (result > 0){
+            return "success";
+        }else {
+            return "error";
+        }
+    }
 
 
 //    @Configuration

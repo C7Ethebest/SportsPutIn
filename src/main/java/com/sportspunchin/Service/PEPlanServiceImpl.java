@@ -32,6 +32,15 @@ public class PEPlanServiceImpl implements PEPlanService {
         }
     }
 
+    public boolean AddPEPlan(PEPlan pePlan){
+        int i = pePlanMapper.insert(pePlan);
+        if (i>0){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
 
 //    //根据id删除书籍
 //    @GetMapping("/delete/{id}")

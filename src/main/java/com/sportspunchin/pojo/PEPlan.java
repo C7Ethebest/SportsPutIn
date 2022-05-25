@@ -15,11 +15,11 @@ import lombok.NoArgsConstructor;
 public class PEPlan {
     //主键自增
     @TableId(value = "peid", type = IdType.AUTO)
-    private Integer peid;
+    private long peid;
 
     private String pename;
     private String times;
     private String coach;
-    private Integer price;
+    private double price;
 
 }
