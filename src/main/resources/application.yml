@@ -21,7 +21,7 @@ logging:
 
 file:
   # 文件上传目录
-  uploadFolder: D:\DATA\
+  uploadFolder: d:/
   # 对外访问的资源目录
   staticAccessPath: /image/**
 

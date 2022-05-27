@@ -35,7 +35,7 @@
             <optional>true</optional>
         </dependency>
 
-        <!--不用写SQL语句的mybatis-->
+        <!--不用写SQL语句的mybatis-plus   搞不懂参数传递人裂开-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>

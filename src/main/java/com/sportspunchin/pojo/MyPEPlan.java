@@ -19,4 +19,6 @@ public class MyPEPlan {
     private String mypename;
     private String mytimes;
     private String mycoach;
+    private String price;
+    private String comment;
 }
