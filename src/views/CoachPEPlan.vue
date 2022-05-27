@@ -33,29 +33,42 @@
             label="价格"
             width="120">
         </el-table-column>
+
+        <div>
         <el-table-column
             fixed="right"
             label="操作">
-          <template slot-scope="scope">
-            <el-button @click="handleClick(scope.row)" type="primary" plain
-                       size="small" >编辑</el-button>
+
+<!--          &lt;!&ndash;根本不需要的编辑&ndash;&gt;-->
+            <template slot-scope="scope">
+<!--              <el-button @click="JumpUpdatePEPlan(scope.row)" type="primary" plain-->
+<!--                         size="small" >编辑</el-button>-->
 
 
-            <el-popover
-                placement="top"
-                width="160"
-                v-model="visible">
-              <p>确认删除吗？</p>
-              <div style="text-align: right; margin: 0">
-                <el-button size="mini" type="text" @click="visible = false">取消</el-button>
-                <el-button type="primary" size="mini" style="margin-left: 20px" @click="visible = false; deletePEPlan(scope.row)">确定</el-button>
-              </div>
-              <el-button slot="reference" type="danger" size="small" style="margin-left: 30px">删除</el-button>
-            </el-popover>
-          </template>
+                <div style="display:inline-block">
+                  <el-popover
+                      placement="top"
+                      width="160"
+                      v-model="visible">
+                    <p>确认删除吗？</p>
+                    <div style="text-align: right; margin: 0">
+                      <el-button size="mini" type="text" @click="visible = false">取消</el-button>
+                      <el-button type="primary" size="mini" style="margin-left: 20px" @click="visible = false; deletePEPlan(scope.row)">确定</el-button>
+                    </div>
+                    <el-button slot="reference" type="danger" size="small" >删除</el-button>
+                  </el-popover>
+                </div>
+<!--              </div>-->
 
-        </el-table-column>
+
+
+            </template>
+
+          </el-table-column>
+        </div>
+
       </el-table>
+
 
 
     </el-container>
@@ -70,7 +83,12 @@
           @current-chang="page">
       </el-pagination>
 
-      <el-button @click="JumpAddPEPlan" type="primary" plain class="Addbtn">添加新计划</el-button>
+      <el-button @click="JumpAddPEPlan" type="primary" plain class="Addbtn">发布新计划</el-button>
+
+    </el-container>
+
+    <el-container>
+
     </el-container>
 
 
@@ -82,6 +100,7 @@ export default {
   name: "CoachPEPlan",
 
   methods: {
+
     deletePEPlan(row){
       const _this = this
       axios.delete('http://localhost:8888/Sport/deletePEPlan/'+row.peid).then(function (){
@@ -94,6 +113,12 @@ export default {
       })
     })
     },
+    //弃用的更新操作
+    // JumpUpdatePEPlan(){
+    //   this.$router.push({
+    //     path: 'UpdatePEPlan'
+    //   })
+    // },
 
     JumpAddPEPlan(){
       this.$router.push({
@@ -103,6 +128,32 @@ export default {
   },
   data() {
     return{
+
+      rules: {
+        pename: [
+          { required: true, message: '请输入训练计划名称', trigger: 'change' },
+          { min: 1, max: 10, message: '长度在 1 到 10 个字符', trigger: 'change' }
+        ],
+        times: [
+          { required: true, message: '请输入训练计划时长', trigger: 'change' }
+        ],
+        coach: [
+          { required: true, message: '请输入教练名称', trigger: 'change' }
+        ],
+        price: [
+          { required: true, message: '请输入训练计划价格', trigger: 'change' }
+        ],
+      },
+
+      dialogFormVisible: false,
+      ruleForm: {
+        pename: '11',
+        times: '',
+        coach: '',
+        price: '',
+      },
+      formLabelWidth: '120px',
+
       PEPlan: [
         {
           peid: '1',
@@ -129,6 +180,7 @@ export default {
 
 
 <style scoped>
+
 .Addbtn{
   margin-top: 7px;
   margin-left: 20px;

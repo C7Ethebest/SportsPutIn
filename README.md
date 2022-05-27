@@ -7,14 +7,14 @@
 球类运动计划(BallSport.vue，弃用)    <br>
 新增教练的计划页面，对表进行的增删改操作的跳转和相关页面    <br>
 AboutView和Home系统自动生成的，用于测试存留
-
+用户打卡图片上传(PunchIn.vue)(仅上传不能回显，教练看不到)
 
 ###开发中：
-教练对表进行的改操作的跳转和相关页面    <br>
-用户打卡图片上传(PunchIn.vue)
+用户的购买操作    <br>
+
 
 ###未完成：
-登陆界面、我的账号(MyAccount.vue)、教练评分、用户评价。 <br>
+登陆界面、我的账号(MyAccount.vue)、教练评分、用户评价。 （教练对表进行的改操作的跳转和相关页面 搁置，无此需求）<br>
 
 *==>可以试着把登陆界面做了，还有增删改相关的页面搭建，跳转的建立等都可以做。*   <br>
 Vue安装教程：https://www.bilibili.com/video/BV11v411M7Xa?spm_id_from=333.337.search-card.all.click   <br>

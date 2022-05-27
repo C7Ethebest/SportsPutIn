@@ -2,7 +2,7 @@
 
 
   <el-descriptions title="用户信息">
-    <el-descriptions-item label="用户名">kooriookami</el-descriptions-item>
+    <el-descriptions-item label="用户名">AAAA</el-descriptions-item>
     <el-descriptions-item label="手机号">18100000000</el-descriptions-item>
     <el-descriptions-item label="居住地">苏州市</el-descriptions-item>
     <el-descriptions-item label="备注">

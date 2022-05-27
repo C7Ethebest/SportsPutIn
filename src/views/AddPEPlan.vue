@@ -18,9 +18,6 @@
       <el-input v-model="ruleForm.price"></el-input>
     </el-form-item>
 
-
-
-
     <el-form-item>
       <el-button type="primary" @click="submitForm ('ruleForm')">立即创建</el-button>
       <el-button @click="resetForm('ruleForm')">重置</el-button>
@@ -69,7 +66,7 @@ export default {
           axios.post('http://localhost:8888/Sport/AddPEPlan',this.ruleForm).then(function (resp){
             // console.log(resp)
             if(resp.data == 'success'){
-              _this.$alert('添加计划成功！','OK',{
+              _this.$alert('发布计划成功！','OK',{
                 confirmButtonText:'确定',
                     callback: action =>{
                   type: 'info',
@@ -77,11 +74,11 @@ export default {
                 }
               })
             }else {
-              _this.$message.error('添加计划失败，请重新输入！');
+              _this.$message.error('发布计划失败，请重新输入！');
             }
           })
         } else {
-          _this.$message.error('添加计划失败，请重新输入！');
+          _this.$message.error('发布计划失败，请重新输入！');
           return false;
         }
       });

@@ -29,7 +29,10 @@
 
     </el-aside>
       <el-main>
+        <body>
         <router-view></router-view>
+        </body>
+
       </el-main>
     </el-container>
   </el-container>

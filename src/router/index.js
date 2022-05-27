@@ -10,6 +10,7 @@ import AddPEPlan from "@/views/AddPEPlan";
 import PunchIn from "@/views/PunchIn";
 import Market from "@/views/Market";
 import CoachPEPlan from "@/views/CoachPEPlan";
+import UpdatePEPlan from "@/views/UpdatePEPlan";
 
 
 Vue.use(VueRouter)
@@ -60,6 +61,11 @@ const routes = [
         path: "/CoachPEPlan",
         name: "教练的计划",
         component: CoachPEPlan
+      },
+      {
+        path: "/UpdatePEPlan",
+        name: "编辑计划",
+        component: UpdatePEPlan
       }
       ],
   },

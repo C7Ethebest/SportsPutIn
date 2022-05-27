@@ -37,9 +37,17 @@
             fixed="right"
             label="操作">
           <template slot-scope="scope">
-            <el-button @click="BuyPEPlan(scope.row)" type="primary" plain
-                       size="small" style="margin-left: 15px">购买</el-button>
-<!--            <el-button type="primary" plain size="small" style="margin-left: 30px">编辑</el-button>-->
+            <el-popover
+                placement="top"
+                width="160"
+                v-model="visible">
+              <p>确认购买吗？</p>
+              <div style="text-align: right; margin: 0">
+                <el-button size="mini" type="text" @click="visible = false">取消</el-button>
+                <el-button type="primary" size="mini" @click="visible = false; BuyPEPlan">确定</el-button>
+              </div>
+              <el-button slot="reference">购买</el-button>
+            </el-popover>
           </template>
         </el-table-column>
       </el-table>
@@ -61,7 +69,7 @@
           background
           layout="prev, pager, next"
           :page-size="4"
-          :total="30"
+          :total="10"
           style="margin-top: 10px;"
           @current-chang="page">
       </el-pagination>
@@ -84,6 +92,37 @@ export default {
           },
       ]
     }
+  },
+  methods:{
+    page(m){
+      this.p.pageNum = n;
+      this.getAll();
+
+    },
+    BuyPEPlan(formName) {
+      const _this = this
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          axios.post('http://localhost:8888/MyPEPlan/AddMyPEPlan',this.ruleForm).then(function (resp){
+            if(resp.data == 'success'){
+              _this.$alert('购买成功！','OK',{
+                confirmButtonText:'确定',
+                callback: action =>{
+                  type: 'info',
+                      _this.$router.push('/MyPEPlan');
+                }
+              })
+            }else {
+              _this.$message.error('购买失败，请重新输入！');
+            }
+          })
+        } else {
+          _this.$message.error('购买失败，请重新输入！');
+          return false;
+        }
+      });
+    },
+
   },
 
   created() {

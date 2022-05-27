@@ -5,7 +5,8 @@ import router from './router'
 import store from './store'
 import './plugins/element.js'
 import VueRouter from "vue-router";
-
+import $ from 'jquery'
+import '/js/file.js'
 
 
 Vue.config.productionTip = false

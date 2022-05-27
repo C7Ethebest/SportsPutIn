@@ -1,16 +1,28 @@
+<!--弃用仅作展示-->
 <template>
   <el-container>
-    <el-col v-for="(o, index) in 4" :key="o" :offset="index > 0 ? 1 : 0">
       <el-card shadow="hover" :body-style="{ padding: '0px'}" class="el-card">
-        <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
+        <img src="@/assets/imgs/basketball.png" class="image">
         <div style="padding: 14px;">
-          <span>好吃的汉堡</span>
+          <span>篮球</span>
           <div class="bottom clearfix">
             <el-button type="text" class="button" onclick="">查看</el-button>
           </div>
         </div>
       </el-card>
-    </el-col>
+
+    <div style="margin-left: 50px">
+      <el-card shadow="hover" :body-style="{ padding: '0px'} " class="el-card">
+        <img src="@/assets/imgs/baseball.png" class="image">
+        <div style="padding: 14px;">
+          <span>棒球</span>
+          <div class="bottom clearfix">
+            <el-button type="text" class="button" onclick="">查看</el-button>
+          </div>
+        </div>
+      </el-card>
+    </div>
+
   </el-container>
 </template>
 
