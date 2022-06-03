@@ -1,14 +1,13 @@
 <template>
   <!--  构建整个页面框架  -->
-  <el-container style="height: 600px; border: 1px solid #eee;text-align: center;" >
-      <el-header style="text-align: right; font-size: 12px">
+  <el-container style="border: 1px solid #eee;text-align: center" >
+      <el-header class="el-header">
         <h1 style="text-align: center;margin-top: auto">体育打卡系统</h1>
       </el-header>
 
-
     <el-container>
-      <!--构建左侧菜单el-aside width="200px-->
-    <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
+      <!--构建左侧菜单el-aside-->
+    <el-aside  style="width: 15%; background-color: rgb(238, 241, 246)" class="el-aside">
         <!--左侧菜单内容-->
               <el-menu :default-openeds="['1']" :default-active="'1-1'">
                 <el-submenu index="1">
@@ -19,21 +18,14 @@
                 <el-menu-item index="2" @click="JumpMyPEPlan"><i class="el-icon-menu"></i><span slot="title">我的锻炼计划</span></el-menu-item>
                 <el-menu-item index="3" @click="JumpMyAccount"><i class="el-icon-setting"></i><span slot="title">我的账号</span></el-menu-item>
               </el-menu>
-<!--      <el-menu router :default-openeds="['0']">-->
-<!--        <el-submenu v-for="(item,index) in $router.options.routes" :index="index+''">-->
-<!--          <template slot="title">{{item.name}}</template>-->
-<!--          <el-menu-item v-for="(item2,index2) in item.children" :index="item2.path"-->
-<!--                        :class="$route.path==item2.path?'is-active':''">{{item2.name}}</el-menu-item>-->
-<!--        </el-submenu>-->
-<!--      </el-menu>-->
-
     </el-aside>
-      <el-main>
+
+      <el-main >
         <body>
         <router-view></router-view>
         </body>
-
       </el-main>
+
     </el-container>
   </el-container>
 
@@ -47,24 +39,17 @@
   line-height: 60px;
 }
 
-.el-aside {
-  color: #333;
+/*.el-aside {*/
+/*  width: 15%;*/
+/*  */
+
+/*}*/
+
+@media screen and (max-width: 991px) {
+
+
 }
 
-.bottom {
-  margin-top: 13px;
-  line-height: 12px;
-}
-
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: "";
-}
-
-.clearfix:after {
-  clear: both
-}
 
 </style>
 

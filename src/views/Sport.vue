@@ -8,7 +8,6 @@
           border
           style="width: 100%">
         <el-table-column
-            fixed
             prop="peid"
             label="编号"
             width="60">
@@ -34,7 +33,6 @@
             width="120">
         </el-table-column>
         <el-table-column
-            fixed="right"
             label="操作">
           <template slot-scope="scope">
             <el-popover
@@ -43,8 +41,8 @@
                 v-model="visible">
               <p>确认购买吗？</p>
               <div style="text-align: right; margin: 0">
-                <el-button size="mini" type="text" @click="visible = false">取消</el-button>
-                <el-button type="primary" size="mini" @click="visible = false; BuyPEPlan">确定</el-button>
+                <el-button size="mini" type="text" >取消</el-button>
+                <el-button type="primary" size="mini" @click="BuyPEPlan(scope.row)">确定</el-button>
               </div>
               <el-button slot="reference">购买</el-button>
             </el-popover>
@@ -99,28 +97,18 @@ export default {
       this.getAll();
 
     },
-    BuyPEPlan(formName) {
+
+    BuyPEPlan(row){
       const _this = this
-      this.$refs[formName].validate((valid) => {
-        if (valid) {
-          axios.post('http://localhost:8888/MyPEPlan/AddMyPEPlan',this.ruleForm).then(function (resp){
-            if(resp.data == 'success'){
-              _this.$alert('购买成功！','OK',{
-                confirmButtonText:'确定',
-                callback: action =>{
-                  type: 'info',
-                      _this.$router.push('/MyPEPlan');
-                }
-              })
-            }else {
-              _this.$message.error('购买失败，请重新输入！');
-            }
-          })
-        } else {
-          _this.$message.error('购买失败，请重新输入！');
-          return false;
-        }
-      });
+      axios.post('http://localhost:8888/MyPEPlan/BuyPEPlan/'+row.peid).then(function (){
+        _this.$alert('购买成功！','消息',{
+          confirmButtonText:'确定',
+          callback: action => {
+            type: 'info',
+                window.location.reload()
+          }
+        })
+      })
     },
 
   },
@@ -136,7 +124,8 @@ export default {
 
 </script>
 
-
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
 <style scoped>
 

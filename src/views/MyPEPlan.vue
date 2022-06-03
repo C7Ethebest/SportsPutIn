@@ -5,66 +5,57 @@
 
       <el-table id="table"
                 :data="MyPEPlan"
-                border
-                style="width: 100%">
+                border>
         <el-table-column
-            fixed
             prop="mypeid"
             label="编号"
-            width="60">
+            width="50px">
         </el-table-column>
         <el-table-column
             prop="mypename"
             label="锻炼名称"
-            width="150">
+            width="150px">
         </el-table-column>
         <el-table-column
             prop="mytimes"
             label="计划时长"
-            width="120">
+            width="120px">
         </el-table-column>
         <el-table-column
             prop="mycoach"
             label="教练"
-            width="120">
+            width="120px">
         </el-table-column>
         <el-table-column
             prop="price"
             label="价格"
-            width="120">
+            width="110px">
         </el-table-column>
-        <el-table-column
-            prop="comment"
-            label="我的评价"
-            width="250">
-        </el-table-column>
-        <el-table-column
-            fixed="right"
-            label="操作">
-          <template slot-scope="scope">
-            <el-button @click="JumpPunchIn" type="primary"  size="small">打卡</el-button>
-            <template>
-              <el-button type="primary" size="small" @click="open" style="margin-left: 15px">评价</el-button>
-            </template>
 
-            <template>
-                <el-popover
-                    placement="top"
-                    width="160"
-                    v-model="visible">
-                  <p>确认退出计划吗？费用概不退还？</p>
-                  <div style="text-align: right; margin: 0">
-                    <el-button size="mini" type="text" @click="visible = false">取消</el-button>
-                    <el-button type="primary" size="mini" @click="visible = false; deleteMyPEPlan(scope.row)">确定</el-button>
-                  </div>
-                  <el-button slot="reference" type="danger" plain size="small" style="margin-left: 15px">退出计划</el-button>
-                </el-popover>
-            </template>
+        <el-table-column
+            label="操作" style="width: 100px;">
+          <template slot-scope="scope" >
+            <div class="el-row--flex">
+              <el-button @click="JumpPunchIn" type="primary"  size="small">打卡</el-button>
+              <el-button type="primary" size="small" @click="open" style="margin-left: 15px">评价</el-button>
+
+              <el-popover
+                  placement="top"
+                  width="160"
+                  v-model="visible">
+                <p>确认退出计划吗？费用概不退还？</p>
+                <div style="text-align: right">
+                  <el-button size="mini" type="text" @click="visible = false">取消</el-button>
+                  <el-button type="primary" size="mini" @click="visible = false; deleteMyPEPlan(scope.row)">确定</el-button>
+                </div>
+                <el-button slot="reference" type="danger" plain size="small" style="margin-left: 15px">退出计划</el-button>
+              </el-popover>
+            </div>
+
 
           </template>
         </el-table-column>
       </el-table>
-
 
     </el-container>
     <!--  分页  -->

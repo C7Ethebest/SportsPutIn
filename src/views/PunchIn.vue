@@ -1,6 +1,5 @@
 
 <template  id="app">
-  <div>
     <el-upload
 
         class="upload-demo"
@@ -16,8 +15,6 @@
 
     <!--回显不了。。。-->
 <!--    <img v-bind:src="tu" alt="回显">-->
-  </div>
-
 </template>
 
 
@@ -47,8 +44,7 @@ export default {
   max-height: 100%;
 }
 .upload-demo{
-  position:absolute;
-  left:520px;
-  top:130px;
+  width: 100%;
+
 }
 </style>
