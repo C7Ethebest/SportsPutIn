@@ -1,16 +1,15 @@
 package com.sportspunchin;
 
-import com.github.pagehelper.Page;
+
+import com.sportspunchin.mapper.MyPEPlanMapper;
 import com.sportspunchin.mapper.PEPlanMapper;
+import com.sportspunchin.pojo.MyPEPlan;
 import com.sportspunchin.pojo.PEPlan;
-import org.apache.ibatis.annotations.Param;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
@@ -20,6 +19,10 @@ public class SportsPunchInApplicationTests {
 
     @Autowired
     private PEPlanMapper pePlanMapper;
+
+    @Autowired
+    private MyPEPlanMapper myPEPlanMapper;
+
 
     //查全部
     @Test
@@ -32,27 +35,60 @@ public class SportsPunchInApplicationTests {
     @Test
     public void AddPEPlan(){
         PEPlan pePlan = new PEPlan();
-        pePlan.setPename("跑步1");pePlan.setTimes("一周");
+        pePlan.setPename("跑步1");
+        pePlan.setTimes("一周");
         pePlan.setCoach("马老师");
         pePlan.setPrice(10);
         int pePlan1 = pePlanMapper.insert(pePlan);
         System.out.println(pePlan1);
     }
 
-    //更新
+
+    //按id查
     @Test
-    public void updatPEPlan(){
-        PEPlan pePlan = new PEPlan();
-        pePlan.setPename("跳伞");
-        pePlan.setTimes("两天");
-        pePlan.setCoach("马老师");
-        pePlan.setPrice(100);
-        //被更改的用户
-        pePlan.setPeid(5);
-        //更新所有非null的值
-        int i = pePlanMapper.updateById(pePlan);
-        System.out.println("影响行数"+i);
+    public void testSelectByid(){
+        PEPlan pePlan = pePlanMapper.selectById(1);
+        System.out.println(pePlan);
     }
+
+
+    //按id购买
+    @Test
+    public void testbuy(){
+        PEPlan pePlan = pePlanMapper.selectById(3);
+        System.out.println(pePlan);
+
+        MyPEPlan myPEPlan = new MyPEPlan();
+        myPEPlan.setMypename(pePlan.getPename());
+        myPEPlan.setMytimes(pePlan.getTimes());
+        myPEPlan.setMycoach(pePlan.getCoach());
+        myPEPlan.setPrice(pePlan.getPrice());
+
+        int mypePlan1 = myPEPlanMapper.insert(myPEPlan);
+        System.out.println(mypePlan1);
+    }
+
+
+
+
+
+    //更新
+//    @Test
+//    public void updatPEPlan(){
+//        PEPlan pePlan = new PEPlan();
+//        pePlan.setPename("跳伞");
+//        pePlan.setTimes("两天");
+//        pePlan.setCoach("马老师");
+//        pePlan.setPrice(100);
+//        //被更改的用户
+//        pePlan.setPeid(5);
+//        //更新所有非null的值
+//        int i = pePlanMapper.updateById(pePlan);
+//        System.out.println("影响行数"+i);
+//    }
+
+
+
 
     //分页查询
 //    @Test

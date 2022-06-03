@@ -13,12 +13,12 @@ import lombok.NoArgsConstructor;
 @TableName(value = "mypeplan")
 public class MyPEPlan {
     //主键自增
-    @TableId(type = IdType.AUTO)
+    @TableId(value = "mypeid" ,type = IdType.AUTO)
     private long mypeid;
 
     private String mypename;
     private String mytimes;
     private String mycoach;
-    private String price;
+    private double price;
     private String comment;
 }

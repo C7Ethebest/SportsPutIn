@@ -21,6 +21,11 @@ public class PEPlanController {
         return pePlanMapper.selectList(null);
     }
 
+    //根据ID查
+    public void Selectbuid(@PathVariable("peid") Integer peid){
+        PEPlan pePlan = pePlanMapper.selectById(peid);
+    }
+
     //删
     @DeleteMapping("/deletePEPlan/{peid}")
     public void deletePEPlan(@PathVariable("peid") Integer peid){

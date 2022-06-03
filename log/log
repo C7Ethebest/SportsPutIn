@@ -1,102 +1,111 @@
-2022-05-27 12:41:21.873  INFO 21568 --- [main] c.s.SportsPunchInApplication             : Starting SportsPunchInApplication using Java 1.8.0_281 on LAPTOP-V6AUU19N with PID 21568 (D:\DATA\CODE\target\classes started by admin in D:\DATA\CODE)
-2022-05-27 12:41:21.880  INFO 21568 --- [main] c.s.SportsPunchInApplication             : No active profile set, falling back to default profiles: default
-2022-05-27 12:41:23.120  INFO 21568 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2022-05-27 12:41:23.130  INFO 21568 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-27 12:41:23.130  INFO 21568 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-05-27 12:41:23.244  INFO 21568 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-05-27 12:41:23.244  INFO 21568 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1287 ms
-2022-05-27 12:41:24.407  WARN 21568 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "mypeid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.MyPEPlan"
-2022-05-27 12:41:24.543  WARN 21568 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "peid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.PEPlan"
-2022-05-27 12:41:24.714  INFO 21568 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-05-27 12:41:25.132  INFO 21568 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2022-05-27 12:41:25.142  INFO 21568 --- [main] c.s.SportsPunchInApplication             : Started SportsPunchInApplication in 3.852 seconds (JVM running for 6.806)
-2022-05-27 13:10:32.279  INFO 21568 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-27 13:10:32.279  INFO 21568 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-05-27 13:10:32.280  INFO 21568 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-05-27 13:10:52.281  WARN 21568 --- [http-nio-8888-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2022-05-27 13:11:05.499  WARN 21568 --- [http-nio-8888-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2022-05-27 15:48:02.689  INFO 1656 --- [main] c.s.SportsPunchInApplication             : Starting SportsPunchInApplication using Java 1.8.0_281 on LAPTOP-V6AUU19N with PID 1656 (D:\DATA\CODE\target\classes started by admin in D:\DATA\CODE)
-2022-05-27 15:48:02.694  INFO 1656 --- [main] c.s.SportsPunchInApplication             : No active profile set, falling back to default profiles: default
-2022-05-27 15:48:04.168  INFO 1656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2022-05-27 15:48:04.178  INFO 1656 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-27 15:48:04.178  INFO 1656 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-05-27 15:48:04.304  INFO 1656 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-05-27 15:48:04.305  INFO 1656 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1536 ms
-2022-05-27 15:48:05.259  WARN 1656 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "mypeid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.MyPEPlan"
-2022-05-27 15:48:05.401  WARN 1656 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "peid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.PEPlan"
-2022-05-27 15:48:05.591  INFO 1656 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-05-27 15:48:05.928  INFO 1656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2022-05-27 15:48:05.940  INFO 1656 --- [main] c.s.SportsPunchInApplication             : Started SportsPunchInApplication in 4.08 seconds (JVM running for 5.405)
-2022-05-27 15:48:21.611  INFO 1656 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-27 15:48:21.611  INFO 1656 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-05-27 15:48:21.612  INFO 1656 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2022-05-27 15:48:21.684  INFO 1656 --- [http-nio-8888-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-05-27 15:48:22.381  INFO 1656 --- [http-nio-8888-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-05-27 16:42:30.618  INFO 16544 --- [main] c.s.SportsPunchInApplication             : Starting SportsPunchInApplication using Java 1.8.0_281 on LAPTOP-V6AUU19N with PID 16544 (D:\DATA\CODE\target\classes started by admin in D:\DATA\CODE)
-2022-05-27 16:42:30.621  INFO 16544 --- [main] c.s.SportsPunchInApplication             : No active profile set, falling back to default profiles: default
-2022-05-27 16:42:31.663  INFO 16544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2022-05-27 16:42:31.670  INFO 16544 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-27 16:42:31.671  INFO 16544 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-05-27 16:42:31.767  INFO 16544 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-05-27 16:42:31.767  INFO 16544 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1085 ms
-2022-05-27 16:42:32.534  WARN 16544 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "mypeid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.MyPEPlan"
-2022-05-27 16:42:32.718  WARN 16544 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "peid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.PEPlan"
-2022-05-27 16:42:32.841  INFO 16544 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-05-27 16:42:33.172  INFO 16544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2022-05-27 16:42:33.184  INFO 16544 --- [main] c.s.SportsPunchInApplication             : Started SportsPunchInApplication in 3.278 seconds (JVM running for 4.865)
-2022-05-27 16:42:37.916  INFO 16544 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-27 16:42:37.917  INFO 16544 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-05-27 16:42:37.917  INFO 16544 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2022-05-27 17:03:35.536  INFO 16544 --- [http-nio-8888-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-05-27 17:03:36.190  INFO 16544 --- [http-nio-8888-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-05-27 17:52:58.931  INFO 34068 --- [main] c.s.SportsPunchInApplication             : Starting SportsPunchInApplication using Java 1.8.0_281 on LAPTOP-V6AUU19N with PID 34068 (D:\DATA\CODE\target\classes started by admin in D:\DATA\CODE)
-2022-05-27 17:52:58.934  INFO 34068 --- [main] c.s.SportsPunchInApplication             : No active profile set, falling back to default profiles: default
-2022-05-27 17:52:59.764  INFO 34068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2022-05-27 17:52:59.769  INFO 34068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-27 17:52:59.770  INFO 34068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-05-27 17:52:59.846  INFO 34068 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-05-27 17:52:59.846  INFO 34068 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 853 ms
-2022-05-27 17:53:00.536  WARN 34068 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "mypeid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.MyPEPlan"
-2022-05-27 17:53:00.645  WARN 34068 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "peid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.PEPlan"
-2022-05-27 17:53:00.759  INFO 34068 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-05-27 17:53:01.067  INFO 34068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2022-05-27 17:53:01.075  INFO 34068 --- [main] c.s.SportsPunchInApplication             : Started SportsPunchInApplication in 2.673 seconds (JVM running for 3.648)
-2022-05-27 17:53:08.031  INFO 34068 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-27 17:53:08.032  INFO 34068 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-05-27 17:53:08.032  INFO 34068 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2022-05-27 17:53:08.081  INFO 34068 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-05-27 17:53:08.644  INFO 34068 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-05-27 18:52:20.851  INFO 35284 --- [main] c.s.SportsPunchInApplication             : Starting SportsPunchInApplication using Java 1.8.0_281 on LAPTOP-V6AUU19N with PID 35284 (D:\DATA\CODE\target\classes started by admin in D:\DATA\CODE)
-2022-05-27 18:52:20.856  INFO 35284 --- [main] c.s.SportsPunchInApplication             : No active profile set, falling back to default profiles: default
-2022-05-27 18:52:22.535  INFO 35284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2022-05-27 18:52:22.544  INFO 35284 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-27 18:52:22.544  INFO 35284 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-05-27 18:52:22.663  INFO 35284 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-05-27 18:52:22.664  INFO 35284 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1623 ms
-2022-05-27 18:52:23.501  WARN 35284 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "mypeid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.MyPEPlan"
-2022-05-27 18:52:23.637  WARN 35284 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "peid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.PEPlan"
-2022-05-27 18:52:23.802  INFO 35284 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-05-27 18:52:24.112  INFO 35284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2022-05-27 18:52:24.122  INFO 35284 --- [main] c.s.SportsPunchInApplication             : Started SportsPunchInApplication in 3.992 seconds (JVM running for 7.169)
-2022-05-27 18:52:26.697  INFO 35284 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-27 18:52:26.698  INFO 35284 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-05-27 18:52:26.699  INFO 35284 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-05-27 18:52:26.787  INFO 35284 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-05-27 18:52:27.626  INFO 35284 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-05-27 18:59:48.833  INFO 13844 --- [main] c.s.SportsPunchInApplication             : Starting SportsPunchInApplication using Java 1.8.0_281 on LAPTOP-V6AUU19N with PID 13844 (D:\DATA\CODE\target\classes started by admin in D:\DATA\CODE)
-2022-05-27 18:59:48.851  INFO 13844 --- [main] c.s.SportsPunchInApplication             : No active profile set, falling back to default profiles: default
-2022-05-27 18:59:52.650  INFO 13844 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2022-05-27 18:59:52.663  INFO 13844 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-27 18:59:52.664  INFO 13844 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-05-27 18:59:52.816  INFO 13844 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-05-27 18:59:52.817  INFO 13844 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3790 ms
-2022-05-27 18:59:54.431  WARN 13844 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "mypeid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.MyPEPlan"
-2022-05-27 18:59:54.716  WARN 13844 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "peid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.PEPlan"
-2022-05-27 18:59:55.024  INFO 13844 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-05-27 18:59:55.742  INFO 13844 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2022-05-27 18:59:55.762  INFO 13844 --- [main] c.s.SportsPunchInApplication             : Started SportsPunchInApplication in 8.175 seconds (JVM running for 12.328)
-2022-05-27 19:00:03.217  INFO 13844 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-27 19:00:03.218  INFO 13844 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-05-27 19:00:03.219  INFO 13844 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-05-27 19:00:03.331  INFO 13844 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-05-27 19:00:04.544  INFO 13844 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-03 10:35:34.670  INFO 52876 --- [main] c.s.SportsPunchInApplication             : Starting SportsPunchInApplication using Java 1.8.0_281 on LAPTOP-V6AUU19N with PID 52876 (D:\DATA\CODE\target\classes started by admin in D:\DATA\CODE)
+2022-06-03 10:35:34.678  INFO 52876 --- [main] c.s.SportsPunchInApplication             : No active profile set, falling back to default profiles: default
+2022-06-03 10:35:35.555  INFO 52876 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2022-06-03 10:35:35.562  INFO 52876 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-03 10:35:35.562  INFO 52876 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-06-03 10:35:35.657  INFO 52876 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-03 10:35:35.657  INFO 52876 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 919 ms
+2022-06-03 10:35:36.324  WARN 52876 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "mypeid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.MyPEPlan"
+2022-06-03 10:35:36.425  WARN 52876 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "peid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.PEPlan"
+2022-06-03 10:35:36.543  INFO 52876 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-03 10:35:36.792  INFO 52876 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2022-06-03 10:35:36.800  INFO 52876 --- [main] c.s.SportsPunchInApplication             : Started SportsPunchInApplication in 2.513 seconds (JVM running for 3.502)
+2022-06-03 10:35:42.485  INFO 52876 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-03 10:35:42.486  INFO 52876 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-03 10:35:42.487  INFO 52876 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-03 10:35:42.548  INFO 52876 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-03 10:35:43.326  INFO 52876 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-03 14:08:52.892  INFO 56816 --- [main] c.s.SportsPunchInApplicationTests        : Starting SportsPunchInApplicationTests using Java 1.8.0_281 on LAPTOP-V6AUU19N with PID 56816 (started by admin in D:\DATA\CODE)
+2022-06-03 14:08:52.897  INFO 56816 --- [main] c.s.SportsPunchInApplicationTests        : No active profile set, falling back to default profiles: default
+2022-06-03 14:08:54.788  WARN 56816 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "mypeid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.MyPEPlan"
+2022-06-03 14:08:54.960  WARN 56816 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "peid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.PEPlan"
+2022-06-03 14:08:55.561  INFO 56816 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-03 14:08:56.143  INFO 56816 --- [main] c.s.SportsPunchInApplicationTests        : Started SportsPunchInApplicationTests in 3.706 seconds (JVM running for 5.233)
+2022-06-03 14:08:56.462  INFO 56816 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-03 14:08:57.555  INFO 56816 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-03 14:08:57.633  INFO 56816 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-03 14:08:57.636  INFO 56816 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-03 14:08:57.640  INFO 56816 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-03 14:10:01.672  INFO 54756 --- [main] c.s.SportsPunchInApplicationTests        : Starting SportsPunchInApplicationTests using Java 1.8.0_281 on LAPTOP-V6AUU19N with PID 54756 (started by admin in D:\DATA\CODE)
+2022-06-03 14:10:01.676  INFO 54756 --- [main] c.s.SportsPunchInApplicationTests        : No active profile set, falling back to default profiles: default
+2022-06-03 14:10:03.463  WARN 54756 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "mypeid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.MyPEPlan"
+2022-06-03 14:10:03.597  WARN 54756 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "peid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.PEPlan"
+2022-06-03 14:10:04.090  INFO 54756 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-03 14:10:04.687  INFO 54756 --- [main] c.s.SportsPunchInApplicationTests        : Started SportsPunchInApplicationTests in 3.465 seconds (JVM running for 5.63)
+2022-06-03 14:10:04.977  INFO 54756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-03 14:10:06.026  INFO 54756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-03 14:10:06.082  INFO 54756 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-03 14:10:06.083  INFO 54756 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-03 14:10:06.086  INFO 54756 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-03 14:17:05.630  INFO 43664 --- [main] c.s.SportsPunchInApplicationTests        : Starting SportsPunchInApplicationTests using Java 1.8.0_281 on LAPTOP-V6AUU19N with PID 43664 (started by admin in D:\DATA\CODE)
+2022-06-03 14:17:05.632  INFO 43664 --- [main] c.s.SportsPunchInApplicationTests        : No active profile set, falling back to default profiles: default
+2022-06-03 14:17:07.399  WARN 43664 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "mypeid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.MyPEPlan"
+2022-06-03 14:17:07.536  WARN 43664 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "peid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.PEPlan"
+2022-06-03 14:17:08.020  INFO 43664 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-03 14:17:08.570  INFO 43664 --- [main] c.s.SportsPunchInApplicationTests        : Started SportsPunchInApplicationTests in 3.38 seconds (JVM running for 4.927)
+2022-06-03 14:17:08.812  INFO 43664 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-03 14:17:09.902  INFO 43664 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-03 14:17:09.988  INFO 43664 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-03 14:17:09.990  INFO 43664 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-03 14:17:09.994  INFO 43664 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-03 14:21:25.704  INFO 56804 --- [main] c.s.SportsPunchInApplicationTests        : Starting SportsPunchInApplicationTests using Java 1.8.0_281 on LAPTOP-V6AUU19N with PID 56804 (started by admin in D:\DATA\CODE)
+2022-06-03 14:21:25.709  INFO 56804 --- [main] c.s.SportsPunchInApplicationTests        : No active profile set, falling back to default profiles: default
+2022-06-03 14:21:27.635  WARN 56804 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "mypeid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.MyPEPlan"
+2022-06-03 14:21:27.788  WARN 56804 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "peid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.PEPlan"
+2022-06-03 14:21:28.432  INFO 56804 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-03 14:21:29.069  INFO 56804 --- [main] c.s.SportsPunchInApplicationTests        : Started SportsPunchInApplicationTests in 3.879 seconds (JVM running for 5.432)
+2022-06-03 14:21:29.337  INFO 56804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-03 14:21:30.549  INFO 56804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-03 14:21:30.634  INFO 56804 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-03 14:21:30.635  INFO 56804 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-03 14:21:30.639  INFO 56804 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-03 14:22:52.965  INFO 53932 --- [main] c.s.SportsPunchInApplicationTests        : Starting SportsPunchInApplicationTests using Java 1.8.0_281 on LAPTOP-V6AUU19N with PID 53932 (started by admin in D:\DATA\CODE)
+2022-06-03 14:22:52.969  INFO 53932 --- [main] c.s.SportsPunchInApplicationTests        : No active profile set, falling back to default profiles: default
+2022-06-03 14:22:55.179  WARN 53932 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "mypeid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.MyPEPlan"
+2022-06-03 14:22:55.374  WARN 53932 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "peid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.PEPlan"
+2022-06-03 14:22:56.224  INFO 53932 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-03 14:22:56.924  INFO 53932 --- [main] c.s.SportsPunchInApplicationTests        : Started SportsPunchInApplicationTests in 4.485 seconds (JVM running for 6.646)
+2022-06-03 14:22:57.265  INFO 53932 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-03 14:22:58.535  INFO 53932 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-03 14:22:58.626  INFO 53932 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-03 14:22:58.627  INFO 53932 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-03 14:22:58.632  INFO 53932 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-03 14:23:07.666  INFO 14656 --- [main] c.s.SportsPunchInApplicationTests        : Starting SportsPunchInApplicationTests using Java 1.8.0_281 on LAPTOP-V6AUU19N with PID 14656 (started by admin in D:\DATA\CODE)
+2022-06-03 14:23:07.670  INFO 14656 --- [main] c.s.SportsPunchInApplicationTests        : No active profile set, falling back to default profiles: default
+2022-06-03 14:23:09.827  WARN 14656 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "mypeid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.MyPEPlan"
+2022-06-03 14:23:09.994  WARN 14656 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "peid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.PEPlan"
+2022-06-03 14:23:10.766  INFO 14656 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-03 14:23:11.568  INFO 14656 --- [main] c.s.SportsPunchInApplicationTests        : Started SportsPunchInApplicationTests in 4.471 seconds (JVM running for 6.058)
+2022-06-03 14:23:11.847  INFO 14656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-03 14:23:12.997  INFO 14656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-03 14:23:13.176  INFO 14656 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-03 14:23:13.177  INFO 14656 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-03 14:23:13.194  INFO 14656 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-03 14:24:09.190  INFO 52780 --- [main] c.s.SportsPunchInApplicationTests        : Starting SportsPunchInApplicationTests using Java 1.8.0_281 on LAPTOP-V6AUU19N with PID 52780 (started by admin in D:\DATA\CODE)
+2022-06-03 14:24:09.197  INFO 52780 --- [main] c.s.SportsPunchInApplicationTests        : No active profile set, falling back to default profiles: default
+2022-06-03 14:24:11.348  WARN 52780 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "mypeid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.MyPEPlan"
+2022-06-03 14:24:11.495  WARN 52780 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "peid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.PEPlan"
+2022-06-03 14:24:12.052  INFO 52780 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-03 14:24:12.665  INFO 52780 --- [main] c.s.SportsPunchInApplicationTests        : Started SportsPunchInApplicationTests in 3.954 seconds (JVM running for 5.698)
+2022-06-03 14:24:12.957  INFO 52780 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-03 14:24:14.140  INFO 52780 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-03 14:24:14.230  INFO 52780 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-03 14:24:14.231  INFO 52780 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-03 14:24:14.235  INFO 52780 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-03 14:45:58.136  INFO 53212 --- [main] c.s.SportsPunchInApplication             : Starting SportsPunchInApplication using Java 1.8.0_281 on LAPTOP-V6AUU19N with PID 53212 (D:\DATA\CODE\target\classes started by admin in D:\DATA\CODE)
+2022-06-03 14:45:58.140  INFO 53212 --- [main] c.s.SportsPunchInApplication             : No active profile set, falling back to default profiles: default
+2022-06-03 14:45:58.993  INFO 53212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2022-06-03 14:45:59.000  INFO 53212 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-03 14:45:59.001  INFO 53212 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-06-03 14:45:59.114  INFO 53212 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-03 14:45:59.114  INFO 53212 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 923 ms
+2022-06-03 14:45:59.799  WARN 53212 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "mypeid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.MyPEPlan"
+2022-06-03 14:45:59.913  WARN 53212 --- [main] c.b.m.core.metadata.TableInfoHelper      : This primary key of "peid" is primitive !不建议如此请使用包装类 in Class: "com.sportspunchin.pojo.PEPlan"
+2022-06-03 14:46:00.059  INFO 53212 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-03 14:46:00.311  INFO 53212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2022-06-03 14:46:00.320  INFO 53212 --- [main] c.s.SportsPunchInApplication             : Started SportsPunchInApplication in 2.659 seconds (JVM running for 3.773)
+2022-06-03 14:46:13.034  INFO 53212 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-03 14:46:13.034  INFO 53212 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-03 14:46:13.035  INFO 53212 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-03 14:46:13.119  INFO 53212 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-03 14:46:13.986  INFO 53212 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
