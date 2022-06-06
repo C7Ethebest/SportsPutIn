@@ -25,3 +25,7 @@ file:
   # 对外访问的资源目录
   staticAccessPath: /image/**
 
+mybatis-plus:
+  type-aliases-package: xxx.xxxx.xxx.xxx
+  mapper-locations:
+    - classpath:mybatis/*.xml
