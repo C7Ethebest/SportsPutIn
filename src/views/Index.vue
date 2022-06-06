@@ -2,7 +2,8 @@
   <!--  构建整个页面框架  -->
   <el-container style="border: 1px solid #eee;text-align: center" >
       <el-header class="el-header">
-        <h1 style="text-align: center;margin-top: auto">体育打卡系统</h1>
+        <h1 class="title">体育打卡系统</h1>
+        <el-button class="el-icon-s-tools" type="text" @click="exit" style="">退出登陆</el-button>
       </el-header>
 
     <el-container>
@@ -39,6 +40,20 @@
   line-height: 60px;
 }
 
+.title{
+  text-align: center;
+  margin-top: auto;
+  margin-left: 50px;
+  display:inline-block;
+}
+
+.el-icon-s-tools{
+  display:inline-block;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
 /*.el-aside {*/
 /*  width: 15%;*/
 /*  */
@@ -67,6 +82,19 @@ export default {
 
   },
   methods:{
+    exit(){
+      this.$confirm('确定要退出吗？', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        this.$router.push({
+          name:'login',
+        })
+      }).catch(() => {
+      });
+    },
+
     JumpSport(){
       this.$router.push({
         name:'运动',

@@ -29,7 +29,15 @@
         <el-table-column
             prop="price"
             label="价格"
-            width="110px">
+            width="90px">
+        </el-table-column>
+        <el-table-column
+            prop="score"
+            label="得分"
+            width="160px">
+          <div class="block">
+            <el-rate v-model="value1" disabled="true"></el-rate>
+          </div>
         </el-table-column>
 
         <el-table-column

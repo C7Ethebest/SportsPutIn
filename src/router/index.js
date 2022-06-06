@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 import Sport from "../views/Sport";
 import BallSport from "../views/BallSport";
 import MyPEPlan from "@/views/MyPEPlan";
@@ -13,9 +12,16 @@ import CoachPEPlan from "@/views/CoachPEPlan";
 import UpdatePEPlan from "@/views/UpdatePEPlan";
 
 
+
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/login',
+    name: 'login',
+    component:() => import('../views/login.vue')
+  },
+
   {
     path: "/",
     name: "主界面",
@@ -58,24 +64,25 @@ const routes = [
         component: Market
       },
       {
-        path: "/CoachPEPlan",
-        name: "教练的计划",
-        component: CoachPEPlan
-      },
-      {
         path: "/UpdatePEPlan",
         name: "编辑计划",
         component: UpdatePEPlan
       }
       ],
   },
-
-
   {
-    path: '/',
-    name: 'login',
-    component:() => import('../views/login.vue')
+    path: '/CoachIndex',
+    name: '教练主界面',
+    component: ()=>import('../views/CoachIndex.vue'),
+    children:[
+      {
+        path: "/CoachPEPlan",
+        name: "教练的计划",
+        component: CoachPEPlan
+      },
+    ]
   },
+
 
 ]
 

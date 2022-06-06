@@ -33,8 +33,6 @@
             label="价格"
             width="120">
         </el-table-column>
-
-        <div>
         <el-table-column
             fixed="right"
             label="操作">
@@ -44,8 +42,36 @@
 <!--              <el-button @click="JumpUpdatePEPlan(scope.row)" type="primary" plain-->
 <!--                         size="small" >编辑</el-button>-->
 
-
                 <div style="display:inline-block">
+                  <el-button type="primary" size="mini" @click="dialogVisible = true">查看打卡</el-button>
+                  <el-dialog
+                      :modal="false"
+                      append-to-body="true"
+                      title="评分"
+                      :visible.sync="dialogVisible"
+                      width="30%"
+                      :before-close="handleClose">
+
+                    <!--弹窗对话框内容-->
+                    <div class="demo-image__preview">
+                        <el-image
+                            style="width: 100px; height: 100px"
+                            :src="url"
+                            :preview-src-list="srcList">
+                        </el-image>
+
+                      <div class="block" style="margin-top: 10px">
+                        <span class="demonstration">评分：</span>
+                        <el-rate v-model="value1" show-text="true" :texts="texts"></el-rate>
+                      </div>
+                    </div>
+
+                    <span slot="footer" class="dialog-footer">
+                      <el-button @click="dialogVisible = false">取 消</el-button>
+                      <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+                    </span>
+                  </el-dialog>
+
                   <el-popover
                       placement="top"
                       width="160"
@@ -55,17 +81,14 @@
                       <el-button size="mini" type="text" @click="visible = false">取消</el-button>
                       <el-button type="primary" size="mini" style="margin-left: 20px" @click="visible = false; deletePEPlan(scope.row)">确定</el-button>
                     </div>
-                    <el-button slot="reference" type="danger" size="small" >删除</el-button>
+                    <el-button slot="reference" type="danger" size="mini" style="margin-left: 15px">删除</el-button>
                   </el-popover>
                 </div>
 <!--              </div>-->
 
-
-
             </template>
 
           </el-table-column>
-        </div>
 
       </el-table>
 
@@ -78,16 +101,12 @@
           background
           layout="prev, pager, next"
           :page-size="4"
-          :total="30"
+          :total="10"
           style="margin-top: 10px;margin-left: 200px"
           @current-chang="page">
       </el-pagination>
 
       <el-button @click="JumpAddPEPlan" type="primary" plain class="Addbtn">发布新计划</el-button>
-
-    </el-container>
-
-    <el-container>
 
     </el-container>
 
@@ -100,6 +119,14 @@ export default {
   name: "CoachPEPlan",
 
   methods: {
+
+    handleClose(done){
+      this.$confirm('确认关闭？')
+      .then(_=>{
+        done();
+      })
+      .catch(_=>{});
+    },
 
     deletePEPlan(row){
       const _this = this
@@ -128,7 +155,18 @@ export default {
   },
   data() {
     return{
+      texts:['重新提交','不及格', '及格', '良好', '优秀'],
 
+      value1: null,
+      url: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',
+      srcList: [
+        'https://fuss10.elemecdn.com/8/27/f01c15bb73e1ef3793e64e6b7bbccjpeg.jpeg',
+        'https://fuss10.elemecdn.com/1/8e/aeffeb4de74e2fde4bd74fc7b4486jpeg.jpeg'
+      ],
+
+      dialogVisible: false,
+
+      //填写规则
       rules: {
         pename: [
           { required: true, message: '请输入训练计划名称', trigger: 'change' },
@@ -145,6 +183,7 @@ export default {
         ],
       },
 
+
       dialogFormVisible: false,
       ruleForm: {
         pename: '11',
@@ -154,6 +193,7 @@ export default {
       },
       formLabelWidth: '120px',
 
+      //封装数据
       PEPlan: [
         {
           peid: '1',
@@ -166,6 +206,7 @@ export default {
     }
   },
 
+  //添加计划
   created() {
     const _this = this
     axios.get('http://localhost:8888/Sport/findAll').then(function (resp){

@@ -55,7 +55,7 @@
 
 <script>
 
-    import register from "@/views/login/register";
+    import register from "@/views/register";
     import request from "@/utils/request";
     // import register from "/register";
     export default {
@@ -124,7 +124,7 @@
             goToLogin(){
                 this.$refs["loginForm"].validate((valid) => {
                     if (valid) {
-                        request.post("/user/login", {
+                        request.post("http://localhost:8888/user/login", {
                             username: this.loginForm.account,
                             password: this.loginForm.password,
                         })
@@ -133,13 +133,14 @@
 
 
                                 if (res.result === 0) {
-                                    this.$message({message: "登录成功" , type: "success"});
                                     sessionStorage.setItem("admin", JSON.stringify(res.data));
                                     if (this.radioVal === '1'){
-                                        this.$router.push("/home");
+                                      this.$message({message: "登录成功" , type: "success"});
+                                      this.$router.push("/Market");
                                     }
                                     else {
-                                        this.$message({message: "教练" , type: "success"});
+                                      this.$message({message: "欢迎教练使用本系统" , type: "success"});
+                                      this.$router.push("/CoachPEPlan");
                                     }
                                 } else {
                                     this.$message.error("账号密码不正确");
@@ -171,16 +172,18 @@
 </script>
 
 <style scoped lang="less">
+
     .login{
         width: 100%;
         height: 100vh;
-        background:whitesmoke;
+        background-image: url('http://www.dnzhuti.com/uploads/allimg/170511/95-1F511162616.jpg');
         overflow: auto;
         position: relative;
         .login_form{
             width: 400px;
             height: 360px;
             position: absolute;
+            padding: 20px;
             left: 50%;
             top: 50%;
             margin-left: -220px;

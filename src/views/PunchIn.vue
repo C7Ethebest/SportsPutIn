@@ -1,7 +1,5 @@
-
 <template  id="app">
     <el-upload
-
         class="upload-demo"
         drag
         action="http://localhost:8888/file/upload"
