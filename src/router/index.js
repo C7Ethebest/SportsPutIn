@@ -81,7 +81,6 @@ const routes = [
         name: "教练的计划",
         component: CoachPEPlan
       },
-
       {
         path: "/CoachAccount",
         name: "教练账号",

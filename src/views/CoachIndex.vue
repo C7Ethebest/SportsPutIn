@@ -86,7 +86,6 @@ export default {
         name:'教练的计划',
       })
     },
-
     JumpCoachAccount(){
       this.$router.push({
         name:'教练账号',
