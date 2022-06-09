@@ -13,7 +13,7 @@
         <!--左侧菜单内容-->
         <el-menu :default-openeds="['1']" :default-active="'1'">
           <el-menu-item index="1" @click="JumpCoachPEPlan"><i class="el-icon-menu"></i><span slot="title">锻炼计划管理</span></el-menu-item>
-          <el-menu-item index="2" @click=""><i class="el-icon-setting"></i><span slot="title">账号管理</span></el-menu-item>
+          <el-menu-item index="2" @click="JumpCoachAccount"><i class="el-icon-setting"></i><span slot="title">账号管理</span></el-menu-item>
         </el-menu>
       </el-aside>
 
@@ -84,6 +84,11 @@ export default {
     JumpCoachPEPlan(){
       this.$router.push({
         name:'教练的计划',
+      })
+    },
+    JumpCoachAccount(){
+      this.$router.push({
+        name:'教练账号',
       })
     },
 
