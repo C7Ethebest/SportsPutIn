@@ -10,6 +10,7 @@ import PunchIn from "@/views/PunchIn";
 import Market from "@/views/Market";
 import CoachPEPlan from "@/views/CoachPEPlan";
 import UpdatePEPlan from "@/views/UpdatePEPlan";
+import CoachAccount from "@/views/CoachAccount";
 
 
 
@@ -79,6 +80,12 @@ const routes = [
         path: "/CoachPEPlan",
         name: "教练的计划",
         component: CoachPEPlan
+      },
+
+      {
+        path: "/CoachAccount",
+        name: "教练账号",
+        component: CoachAccount,
       },
     ]
   },
