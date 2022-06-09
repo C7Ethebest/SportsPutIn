@@ -2,7 +2,7 @@
 
     <el-descriptions title="教练信息">
 
-            <el-descriptions-item label="用户名">教练datou</el-descriptions-item>
+            <el-descriptions-item label="用户名">王老师</el-descriptions-item>
             <el-descriptions-item label="手机号">15537926097</el-descriptions-item>
             <el-descriptions-item label="居住地">长沙市</el-descriptions-item>
             <el-descriptions-item label="备注">

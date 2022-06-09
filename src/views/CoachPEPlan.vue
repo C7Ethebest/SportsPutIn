@@ -158,10 +158,10 @@ export default {
       texts:['重新提交','不及格', '及格', '良好', '优秀'],
 
       value1: null,
-      url: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',
+      url: 'https://img2.baidu.com/it/u=4049815613,1705873702&fm=253&fmt=auto&app=120&f=JPEG?w=654&h=500',
       srcList: [
-        'https://fuss10.elemecdn.com/8/27/f01c15bb73e1ef3793e64e6b7bbccjpeg.jpeg',
-        'https://fuss10.elemecdn.com/1/8e/aeffeb4de74e2fde4bd74fc7b4486jpeg.jpeg'
+        'https://img2.baidu.com/it/u=4049815613,1705873702&fm=253&fmt=auto&app=120&f=JPEG?w=654&h=500',
+        'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.iresearch.cn%2Fnews%2F202107%2Fc9abd83c-f8af-4178-9d4a-c83057afd242.jpeg&refer=http%3A%2F%2Fpic.iresearch.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1657346835&t=144b6f6770a14433ce8a5ca17d3285f0'
       ],
 
       dialogVisible: false,

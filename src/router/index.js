@@ -18,13 +18,13 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/login',
+    path: '/',
     name: 'login',
     component:() => import('../views/login.vue')
   },
 
   {
-    path: "/",
+    path: "/index",
     name: "主界面",
     component: Index,
     redirect: "/Market",
